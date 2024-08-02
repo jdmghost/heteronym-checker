@@ -438,8 +438,6 @@ const heteronyms = [
 let heteronymList   = document.getElementById('heteronymList');
 let submitButton    = document.getElementById('checkForHeteronyms');
 
-console.log(yourText);
-
 function checkHeteronyms() {
     let yourText = document.getElementById('yourText').value;
 
