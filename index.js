@@ -434,16 +434,23 @@ const heteronyms = [
     "ye",
 ];
 
-
+// global variables
 let heteronymList   = document.getElementById('heteronymList');
 let submitButton    = document.getElementById('checkForHeteronyms');
 
+// default list item
+// let listItem        = document.createElement("li");
+// let defaultItemText = "No heteronyms found!"
+// let defaultListItem = listItem.appendChild(document.createTextNode(defaultItemText));
+
+// function to check your text with the array of heteronyms
 function checkHeteronyms() {
     let yourText = document.getElementById('yourText').value;
 
     // clear all list items
     heteronymList.replaceChildren();
 
+    // print matching items
     heteronyms.forEach((word) => {
         if (yourText.includes(word)) {
             let listItem = document.createElement("li");
@@ -453,6 +460,7 @@ function checkHeteronyms() {
         }
     });
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     submitButton.addEventListener("click", checkHeteronyms);
